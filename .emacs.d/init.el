@@ -28,6 +28,9 @@
 (setq suggest-key-bindings t)
 (setq vc-follow-symlinks t)
 (setq make-backup-files nil)
+(autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
+(dolist (hook '(tex-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -61,7 +64,6 @@
 (global-set-key "\M-p" 'prev5)
 (global-set-key "\M-o" 'other-window)
 (global-set-key "\M-i" 'back-window)
-(global-set-key "\C-z" 'zap-to-char)
 (global-set-key "\C-h" 'backward-delete-char)
 (global-set-key "\M-d" 'delete-word)
 (global-set-key "\M-h" 'backward-delete-word)

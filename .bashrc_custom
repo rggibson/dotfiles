@@ -1,1 +1,1 @@
-
+export PATH=$HOME/google_appengine:$PATH
