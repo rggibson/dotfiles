@@ -16,6 +16,7 @@
 (require 'whitespace)
 (require 'dired-x)
 (require 'compile)
+(require 'saveplace)
 (ido-mode t)
 (menu-bar-mode -1)
 (normal-erase-is-backspace-mode 0)
@@ -31,6 +32,8 @@
 (autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
 (dolist (hook '(tex-mode-hook))
   (add-hook hook (lambda () (flyspell-mode 1))))
+(setq save-place-file "~/dotfiles/.emacs.d/saveplace")
+(setq-default save-place t) ;; active save-place for all buffers
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

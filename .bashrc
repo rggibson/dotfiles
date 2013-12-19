@@ -201,6 +201,7 @@ export GREP_COLOR='1;31' # green for matches
 
 # Opening files
 alias open=xdg-open
+alias feh='feh -zsZFD'
 
 # 2.5) sort options
 # Ensures cross-platform sorting behavior of GNU sort.
