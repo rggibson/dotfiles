@@ -190,7 +190,7 @@ alias du='du -ch --max-depth=1'
 alias treeacl='tree -A -C -L 2'
 
 # 2.3) Text and editor commands
-alias emacs='emacs -nw'     # No X11 windows
+alias emacs='TERM=xterm; emacs -nw'     # No X11 windows
 alias eqq='emacs -nw -Q' # No config and no X11
 export EDITOR='emacs -nw'
 export VISUAL='emacs -nw' 
@@ -230,3 +230,10 @@ export LC_ALL=POSIX
 
 ## Define any user-specific variables you want here.
 source ~/.bashrc_custom
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# node.js
+export PATH="$PATH:$HOME/node-v0.10.26-linux-x64/bin"
