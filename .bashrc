@@ -188,6 +188,7 @@ alias md='mkdir'
 alias cl='clear'
 alias du='du -ch --max-depth=1'
 alias treeacl='tree -A -C -L 2'
+alias waitpidthen='ps -p $PID; do sleep 1; done ; '
 
 # 2.3) Text, editor and other commands
 alias emacs='TERM=xterm; emacs -nw'     # No X11 windows
@@ -196,6 +197,7 @@ export EDITOR='emacs -nw'
 export VISUAL='emacs -nw' 
 alias 7zaa='7za a -m0=bzip2'
 alias 7zax='7za x'
+alias less='less -r'
 
 # 2.4) grep options
 export GREP_OPTIONS='--color=auto'
@@ -239,3 +241,8 @@ eval "$(rbenv init -)"
 
 # node.js
 export PATH="$PATH:$HOME/node-v0.10.26-linux-x64/bin"
+
+# Bash history size
+export HISTSIZE=1000000
+export HISTCONTROL=erasedups
+shopt -s histappend
