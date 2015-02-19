@@ -62,7 +62,9 @@ export PATH=$HOME/bin:$PATH
 export PATH=/usr/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH=$PATH:$HOME/google_appengine
+export PATH=$HOME/google_appengine:$PATH
+export PATH=/opt/Qt5.3.1/5.3/gcc_64/bin:$PATH
+export PATH=$HOME/mxe/usr/bin:$PATH
 #export PATH=/usr/local/heroku/bin:$PATH # Heroku: https://toolbelt.heroku.com/standalone
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

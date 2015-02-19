@@ -34,6 +34,9 @@
   (add-hook hook (lambda () (flyspell-mode 1))))
 (setq save-place-file "~/dotfiles/.emacs.d/saveplace")
 (setq-default save-place t) ;; active save-place for all buffers
+(defadvice split-window-horizontally (after rebalance-windows activate)
+  (balance-windows))
+(ad-activate 'split-window-horizontally)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

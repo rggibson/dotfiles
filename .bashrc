@@ -246,3 +246,6 @@ export PATH="$PATH:$HOME/node-v0.10.26-linux-x64/bin"
 export HISTSIZE=1000000
 export HISTCONTROL=erasedups
 shopt -s histappend
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
