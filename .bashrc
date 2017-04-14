@@ -198,14 +198,15 @@ export VISUAL='emacs -nw'
 alias 7zaa='7za a -m0=bzip2'
 alias 7zax='7za x'
 alias less='less -r'
+alias clear_cache='sync && echo "echo 3 > /proc/sys/vm/drop_caches" | sudo sh'
 
 # 2.4) grep options
-export GREP_OPTIONS='--color=auto'
+alias grep='grep --color=auto'
 export GREP_COLOR='1;31' # green for matches
 
 # Opening files
 alias open=xdg-open
-alias feh='feh -zsZFD'
+alias feh='feh -zsZD'
 
 # 2.5) sort options
 # Ensures cross-platform sorting behavior of GNU sort.
@@ -235,12 +236,13 @@ export LC_ALL=POSIX
 ## Define any user-specific variables you want here.
 source ~/.bashrc_custom
 
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# Virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME
+source /usr/local/bin/virtualenvwrapper.sh
 
 # node.js
-export PATH="$PATH:$HOME/node-v0.10.26-linux-x64/bin"
+export PATH="$PATH:$HOME/node-v6.10.2-linux-x64/bin"
 
 # Bash history size
 export HISTSIZE=1000000
@@ -249,3 +251,9 @@ shopt -s histappend
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Add home/bin
+export PATH="$PATH:$HOME/bin"
+
+# Screen terminal on ssh
+export TERM="xterm"

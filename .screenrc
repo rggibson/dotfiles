@@ -85,6 +85,7 @@ sorendition "+b kG"
 hardstatus alwayslastline "%H %-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"  
 
 # 2.3) Autoload one screen tab for bash.
+term screen
 screen -t bash 0
 
 # 2.4) Description of the keywords used in hardstatus
@@ -127,3 +128,4 @@ screen -t bash 0
 #    %+Lw     - window list from the next window on (-), show window flags (L)
 #    %-0<     - truncation/padding point.  Place this point zero spaces (0)
 #               from the right margin (-).
+

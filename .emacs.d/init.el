@@ -20,6 +20,8 @@
 (ido-mode t)
 (menu-bar-mode -1)
 (normal-erase-is-backspace-mode 0)
+(electric-indent-mode 0)
+(define-key global-map (kbd "RET") 'newline-and-indent)
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (setq column-number-mode t)
@@ -29,6 +31,7 @@
 (setq suggest-key-bindings t)
 (setq vc-follow-symlinks t)
 (setq make-backup-files nil)
+(setq js-indent-level 2)
 (autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
 (dolist (hook '(tex-mode-hook))
   (add-hook hook (lambda () (flyspell-mode 1))))
@@ -86,3 +89,7 @@
 (require 'jade-mode)    
 (add-to-list 'auto-mode-alist '("\\.styl$" . sws-mode))
 (add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
+
+;; Other modes
+(load "less-css-mode.el")
+(add-to-list 'auto-mode-alist '("\\.less$" . less-css-mode))
